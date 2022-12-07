@@ -6,4 +6,4 @@ npm install
 
 npm start
 
-npm install react-leaflet leafletА, еще усановить:
+npm install react-leaflet leaflet
