@@ -25,6 +25,56 @@ body,
     border-radius: 4px;
     background-color: white;
 }
+.add-marker-form-1{
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-2{
+    position: absolute;
+    top: 50px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-3{
+    position: absolute;
+    top: 80px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-4{
+    position: absolute;
+    top: 110px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-5{
+    position: absolute;
+    top: 140px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
 
 .add-marker-field1{
     position: absolute;

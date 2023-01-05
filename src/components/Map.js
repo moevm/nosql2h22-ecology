@@ -9,7 +9,8 @@ import L from "leaflet";
 // import AddMarkerForm from "./AddMarkerForm";
 import UpdateButton from "./UpdateButton";
 import UploadButton from "./UploadButtton";
-import AddMarkerFormControlled from "./AddMarkerFormControlled";
+import AddMarkerFormWork from "./AddMarkerFormWork";
+// import AddMarkerFormControlled from "./AddMarkerFormControlled";
 
 
 // указываем путь к файлам marker
@@ -37,7 +38,8 @@ class MapComponent extends React.Component {
                 />
                 {/*<AddMarkerButton/>*/}
                 {/*<AddMarkerForm/>*/}
-                <AddMarkerFormControlled/>
+                {/*<AddMarkerFormControlled/>*/}
+                <AddMarkerFormWork/>
                 <UpdateButton/>
                 <UploadButton/>
                 <Marker position={center}>
