@@ -1,4 +1,7 @@
 import React from "react";
+// import {writeJsonFile} from 'write-json-file';
+
+
 
 class AddMarkerFormWork extends React.Component {
     constructor(props) {
@@ -23,8 +26,23 @@ class AddMarkerFormWork extends React.Component {
             [name]: value
         });
         console.log(this.state)
-    }
 
+    }
+    // file_name, json
+    // async writeToJson() {
+    //     try {
+    //         const response = await writeJsonFile('foo.json', {foo: true});
+    //         console.log(response)
+    //
+    //     } catch (e) {
+    //         console.log(`write to file FAILED : ${e}`);
+    //     }
+    // }
+//     writeFileAtomic = require('write-file-atomic')
+//     writeFileAtomic('message.txt', 'Hello Node', {chown:{uid:100,gid:50}}, function (err) {
+//     if (err) throw err;
+//     console.log('It\'s saved!');
+// });
     render() {
         return (
             <div>
@@ -73,7 +91,7 @@ class AddMarkerFormWork extends React.Component {
                             onChange={this.handleInputChange} />
                     </label>
 
-                    <button type="submit"> Submit </button>
+                    <button type="submit" className={"add-marker-form-button"}> Submit </button>
                 </form>
             </div>
         );

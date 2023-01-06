@@ -75,6 +75,16 @@ body,
     border-radius: 4px;
     background-color: white;
 }
+.add-marker-form-button{
+    position: absolute;
+    top: 170px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
 
 .add-marker-field1{
     position: absolute;
