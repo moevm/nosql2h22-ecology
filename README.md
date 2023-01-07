@@ -5,5 +5,3 @@
 npm install
 
 npm start
-
-npm install react-leaflet leaflet
