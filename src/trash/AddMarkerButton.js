@@ -1,5 +1,5 @@
 import React from "react";
-import '../components/Map.css'
+import '../frontend/components/Map.css'
 // import AddMarkerForm from "./AddMarkerForm";
 class AddMarkerButton extends React.Component{
     constructor(props) {

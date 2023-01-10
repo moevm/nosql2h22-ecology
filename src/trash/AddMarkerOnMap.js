@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import {useMap} from "react-leaflet";
 import L from "leaflet";
-import '../components/styles.css'
+import '../frontend/components/styles.css'
 
 export default function BootstrapButton() {
     const map = useMap();
