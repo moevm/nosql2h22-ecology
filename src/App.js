@@ -1,11 +1,50 @@
 import React from "react";
+import {useState} from "react";
 // import {MapContainer} from "react-leaflet";
-import MapComponent from "./components/Map";
-function App() {
-  return (
-      <MapComponent/>
+import MapComponent from "./frontend/components/MapAdmin";
+import MapComponentUser from "./frontend/components/MapUser";
+import LoginForm from "./frontend/components/LoginForm";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate
+} from "react-router-dom";
 
-  );
+function App() {
+
+    const [loggedIn, setloggedIn] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(false);
+
+    function callbackFunction(childData) {
+        setloggedIn(childData);
+    }
+
+    function callbackFunctionIsAdmin(childData) {
+        setIsAdmin(childData);
+    }
+
+    return (
+        <Router>
+            <Routes>
+                <Route path={"/MapAdmin"}
+                       element={loggedIn ? <MapComponent/> : <Navigate to="/"/>}>
+
+                </Route>
+                <Route path="/"
+                       element={
+                           loggedIn ? (<Navigate to="/MapAdmin"/>) : (<LoginForm parentCallback={callbackFunction}/>)
+                       }>
+                </Route>
+                <Route path={"/MapUser"}
+                       element={loggedIn ? <MapComponentUser/> : <Navigate to="/"/>}>
+
+                </Route>
+
+            </Routes>
+        </Router>
+
+    );
 }
 
 export default App;
