@@ -31,13 +31,14 @@ function App() {
                        element={loggedIn ? <MapComponent/> : <Navigate to="/"/>}>
 
                 </Route>
-                <Route path="/"
+                <Route path={"/"}
                        element={
                            loggedIn ? (<Navigate to="/MapAdmin"/>) : (<LoginForm parentCallback={callbackFunction}/>)
                        }>
                 </Route>
                 <Route path={"/MapUser"}
-                       element={loggedIn ? <MapComponentUser/> : <Navigate to="/"/>}>
+                       element={
+                    loggedIn ? <MapComponentUser/> : <Navigate to="/"/>}>
 
                 </Route>
 
