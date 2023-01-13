@@ -1,37 +1,38 @@
 import React from "react";
 import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import './Map.css';
-// import Description from "./ModalWindowAddMarker";
-// import BootstrapButton from "./AddMarkerOnMap";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-// import AddMarkerButton from "./AddMarkerButton";
-// import AddMarkerForm from "./AddMarkerForm";
 import UpdateButton from "./UpdateButton";
 import UploadButton from "./UploadButtton";
 import AddMarkerFormWork from "./AddMarkerFormWork";
-// import AddMarkerFormControlled from "./AddMarkerFormControlled";
+import {useNavigate} from "react-router-dom";
 
 
 // указываем путь к файлам marker
 L.Icon.Default.imagePath = "https://unpkg.com/leaflet@1.5.0/dist/images/";
 
-class MapComponent extends React.Component {
-    state = {
+// class MapComponent extends React.Component {
+export default function MapComponent(){
+    const state = {
         lat: 59.97152978128397,
         lng: 30.3209661539183,
         zoom: 10
     };
 
 
-    render() {
-        var center = [this.state.lat, this.state.lng];
+    // render() {
+        var center = [state.lat, state.lng];
 
+    const navigate = useNavigate();
+    const navigateTable = () => {
+        navigate('/DataTable');
+    };
 
         return (
 
-            <MapContainer zoom={this.state.zoom} center={center}>
-
+            <MapContainer zoom={state.zoom} center={center}>
+                <button className={"DataTable-button"} onClick={navigateTable}>DataTable</button>
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -53,7 +54,7 @@ class MapComponent extends React.Component {
                 {/*/>*/}
             </MapContainer>
         );
-    }
+    // }
 }
 
-export default MapComponent;
+// export default MapComponent;
