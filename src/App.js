@@ -1,6 +1,6 @@
 import React from "react";
 import {useState} from "react";
-// import {MapContainer} from "react-leaflet";
+import DataTable from "./frontend/components/DataTable";
 import MapComponent from "./frontend/components/MapAdmin";
 import MapComponentUser from "./frontend/components/MapUser";
 import LoginForm from "./frontend/components/LoginForm";
@@ -8,13 +8,15 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Navigate
+    Navigate,
+    useNavigate
 } from "react-router-dom";
 
 function App() {
 
     const [loggedIn, setloggedIn] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
+
 
     function callbackFunction(childData) {
         setloggedIn(childData);
@@ -41,7 +43,9 @@ function App() {
                     loggedIn ? <MapComponentUser/> : <Navigate to="/"/>}>
 
                 </Route>
-
+                <Route path={"/DataTable"}
+                       element={<DataTable/>}>
+                </Route>
             </Routes>
         </Router>
 
