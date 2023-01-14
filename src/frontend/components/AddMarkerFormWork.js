@@ -21,7 +21,7 @@ class AddMarkerFormWork extends React.Component {
     }
 
     sendMarkerDataJSON(){
-        PostDataMarkerJSON(this.state)
+        PostDataMarkerJSON(JSON.stringify(this.state))
         console.log("posted");
         // TestRequest()
     }
