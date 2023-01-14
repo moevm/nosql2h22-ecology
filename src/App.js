@@ -1,6 +1,7 @@
 import React from "react";
 import {useState} from "react";
 import DataTable from "./frontend/components/DataTable";
+import DataTableWitchSearch from "./frontend/components/DataTableWithSearch";
 import MapComponent from "./frontend/components/MapAdmin";
 import MapComponentUser from "./frontend/components/MapUser";
 import LoginForm from "./frontend/components/LoginForm";
@@ -44,7 +45,7 @@ function App() {
 
                 </Route>
                 <Route path={"/DataTable"}
-                       element={<DataTable/>}>
+                       element={<DataTableWitchSearch/>}>
                 </Route>
             </Routes>
         </Router>
