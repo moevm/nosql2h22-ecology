@@ -1,7 +1,9 @@
 import React from "react";
+import {PostDataMarkerJSON} from "../requests/RequestToAddMarkerToJSON";
 // import {writeJsonFile} from 'write-json-file';
 import saveJSON from "../../backend/SaveJSON";
 import loadJSON from "../../backend/LoadJSON";
+import {TestRequest} from "../requests/RequestToAddMarkerToJSON";
 
 class AddMarkerFormWork extends React.Component {
     constructor(props) {
@@ -15,6 +17,22 @@ class AddMarkerFormWork extends React.Component {
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.AddMarkerToJSON = this.AddMarkerToJSON.bind(this);
+    }
+
+    sendMarkerDataJSON(){
+        PostDataMarkerJSON(this.state)
+        console.log("posted");
+        // TestRequest()
+    }
+
+    AddMarkerToJSON() {
+        // const data = loadJSON('data.json')
+        // data.push(data)
+        // saveJSON('data.json', data)
+        console.log(this.state)
+        this.sendMarkerDataJSON()
+
     }
 
     handleInputChange(event) {
@@ -91,17 +109,12 @@ class AddMarkerFormWork extends React.Component {
                             onChange={this.handleInputChange} />
                     </label>
 
-                    <button type="button" onClick={this.AddMarkerToJSON()} className={"add-marker-form-button"}> Add Marker </button>
+                    <button type="button" onClick={this.AddMarkerToJSON} className={"add-marker-form-button"}> Add Marker </button>
                 </form>
             </div>
         );
     }
 
-    AddMarkerToJSON() {
-        // const data = loadJSON('data.json')
-        // data.push(data)
-        // saveJSON('data.json', data)
-        console.log(this.state)
-    }
+
 }
 export default AddMarkerFormWork
