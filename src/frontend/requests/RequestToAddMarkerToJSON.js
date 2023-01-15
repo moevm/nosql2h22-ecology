@@ -1,13 +1,12 @@
 export function PostDataMarkerJSON(jsonData) {
-    console.log(jsonData)
     fetch('http://localhost:5000/', { //МЕНЯТЬ АДРЕС ТУТ
-
-        method: 'POST',
-        mode: 'cors',
-        body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
-
+        method: "POST",
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonData),
     })
-
 }
 
 export function TestRequest() {
