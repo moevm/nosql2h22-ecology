@@ -3,7 +3,6 @@ import {PostDataMarkerJSON} from "../requests/RequestToAddMarkerToJSON";
 // import {writeJsonFile} from 'write-json-file';
 import saveJSON from "../../backend/SaveJSON";
 import loadJSON from "../../backend/LoadJSON";
-import {TestRequest} from "../requests/RequestToAddMarkerToJSON";
 
 class AddMarkerFormWork extends React.Component {
     constructor(props) {
@@ -20,8 +19,8 @@ class AddMarkerFormWork extends React.Component {
         this.AddMarkerToJSON = this.AddMarkerToJSON.bind(this);
     }
 
-    sendMarkerDataJSON(){
-        PostDataMarkerJSON(JSON.stringify(this.state))
+    sendMarkerDataJSON() {
+        PostDataMarkerJSON(this.state)
         console.log("posted");
         // TestRequest()
     }
