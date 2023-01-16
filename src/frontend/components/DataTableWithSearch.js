@@ -1,4 +1,6 @@
 import * as React from 'react';
+import './Map.css'
+import GetDataFromServerButton from "./GetDataFromServerButton";
 import {useNavigate} from "react-router-dom";
 import {
     Table,
@@ -9,6 +11,7 @@ import {
     Row,
     Cell,
 } from '@table-library/react-table-library/table';
+import {useState} from "react";
 
 const list = [
     {
@@ -35,18 +38,24 @@ const list = [
 ];
 
 const data2 = [
-    { lat: 22.222, lon: 19.13, name: "ETU", desc: "ab", last_change: new Date(2022, 0, 14, 10, 32)},
-    { lat: 22.21212, lon: 19.14, name: "ITMO", desc: "ab", last_change: new Date(2022, 0, 14, 10, 31)},
-    { lat: 10.122, lon: 19.15, name: "MSU", desc: "ab", last_change: new Date(2022, 0, 14, 10, 30)},
+    {lat: 22.222, lon: 19.13, name: "ETU", desc: "ab", last_change: new Date(2022, 0, 14, 10, 32)},
+    {lat: 22.21212, lon: 19.14, name: "ITMO", desc: "ab", last_change: new Date(2022, 0, 14, 10, 31)},
+    {lat: 10.122, lon: 19.15, name: "MSU", desc: "ab", last_change: new Date(2022, 0, 14, 10, 30)},
 ]
 export default function DataTableWitchSearch() {
     const [search, setSearch] = React.useState('');
+    const [dataMarkers, setDataMarkers] = useState(data2);
     const navigate = useNavigate();
     const data = {
-        nodes: data2.filter((item) =>
+        nodes: dataMarkers.filter((item) =>
             item.name.toLowerCase().includes(search.toLowerCase())
         ),
     };
+    const childToParent = (childdata) => {
+        console.log(childdata)
+        setDataMarkers(childdata);
+    }
+
 
     const navigateHome = () => {
         navigate('/MapAdmin');
@@ -59,6 +68,7 @@ export default function DataTableWitchSearch() {
 
     return (
         <div>
+            <GetDataFromServerButton childToParent={childToParent}/>
             <label htmlFor="search">
                 Search by Name:
                 <input id="search" type="text" onChange={handleSearch}/>
@@ -91,18 +101,21 @@ export default function DataTableWitchSearch() {
                                             year: 'numeric',
                                             month: '2-digit',
                                             day: '2-digit',
-                                            hour:'numeric',
-                                            minute:'numeric'
+                                            hour: 'numeric',
+                                            minute: 'numeric'
                                         }
-                                    )||''}
+                                    ) || ''}
                                 </Cell>
                             </Row>
                         ))}
                     </Body>
                 </>
             )}</Table>
+
             <button className={"DataTable-button"} onClick={navigateHome}>DataTable</button>
+
         </div>
+
 
     )
 };

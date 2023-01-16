@@ -7,6 +7,7 @@ import UpdateButton from "./UpdateButton";
 import UploadButton from "./UploadButtton";
 import AddMarkerFormWork from "./AddMarkerFormWork";
 import {useNavigate} from "react-router-dom";
+import GetDataFromServerButton from "./GetDataFromServerButton";
 
 
 // указываем путь к файлам marker
@@ -29,10 +30,14 @@ export default function MapComponent(){
         navigate('/DataTable');
     };
 
-        return (
+    const navigateLogin = () => {
+        navigate('/');
+    };
+    return (
 
             <MapContainer zoom={state.zoom} center={center}>
                 <button className={"DataTable-button"} onClick={navigateTable}>DataTable</button>
+                <button onClick={navigateLogin} className={"NavHome-button"}>Logout</button>
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -43,6 +48,7 @@ export default function MapComponent(){
                 <AddMarkerFormWork/>
                 <UpdateButton/>
                 <UploadButton/>
+                <GetDataFromServerButton/>
                 <Marker position={center}>
                     <Popup>Опять пожар</Popup>
                 </Marker>

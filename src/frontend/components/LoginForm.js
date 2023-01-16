@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import useForm from "./useForm";
 import validate from "./LoginFormValidationRules";
 import {Navigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const LoginForm = props => {
     const {values, errors, handleChange, handleSubmit, isAdmin } = useForm(
@@ -9,6 +10,7 @@ const LoginForm = props => {
         validate
     );
     const [loggedIn, setLoggedIn] = useState(false);
+    const navigate = useNavigate();
 
     function login() {
         setLoggedIn(true);
@@ -16,8 +18,15 @@ const LoginForm = props => {
         return <Navigate to="/default"/>;
     }
 
+    const handleUserLogin = () => {
+        navigate('/MapUser');
+    }
+
     return (
         <div className="section is-fullheight">
+            <button onClick={handleUserLogin}>
+                Login as User
+            </button>
             {loggedIn && <Navigate to="/default"/>}
             <div className="container">
                 <div className="column is-6 is-offset-3">
@@ -61,7 +70,7 @@ const LoginForm = props => {
                                 type="submit"
                                 className="button is-block is-info is-fullwidth"
                             >
-                                Login
+                                Login as Admin
                             </button>
                         </form>
                     </div>
