@@ -198,6 +198,16 @@ body,
     border-radius: 4px;
     background-color: white;
 }
+.get-data-button{
+    position: absolute;
+    top: 410px;
+    right: 20px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
 .DataTable-button{
     position: absolute;
     top: 280px;

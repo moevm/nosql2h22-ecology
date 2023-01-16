@@ -41,8 +41,8 @@ function App() {
                 </Route>
                 <Route path={"/MapUser"}
                        element={
-                    loggedIn ? <MapComponentUser/> : <Navigate to="/"/>}>
-
+                    // loggedIn ? <MapComponentUser/> : <Navigate to="/"/>}>
+                       <MapComponentUser/>}>
                 </Route>
                 <Route path={"/DataTable"}
                        element={<DataTableWitchSearch/>}>

@@ -9,6 +9,16 @@ export function PostDataMarkerJSON(jsonData) {
     })
 }
 
+export function GetDataMarkerJSON(){
+    return fetch('http://localhost:5000/data', {
+        method: "GET",
+        // headers: {
+        //     Accept: 'application/json',
+        //     'Content-Type': 'application/json',
+        // }
+    })
+}
+
 export function TestRequest() {
     fetch('http://localhost:5000/', {
         method: "POST",
