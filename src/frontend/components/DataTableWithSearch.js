@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {useState} from 'react';
 import './Map.css'
-import Data from '../dataBuffer.json'
 import GetDataFromServerButton from "./GetDataFromServerButton";
 import {useNavigate} from "react-router-dom";
 import {Body, Cell, Header, HeaderCell, HeaderRow, Row, Table,} from '@table-library/react-table-library/table';
