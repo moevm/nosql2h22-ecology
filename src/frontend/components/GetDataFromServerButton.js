@@ -5,10 +5,10 @@ import './Map.css'
 export default function GetDataFromServerButton({childToParent}) {
     // const [dataMarkers , setDataMarkers] = useState([])
 
-    var dataMarkers = []
+    var dataMarkers =[]
 
-    function handleClick() {
-        GetDataMarkerJSON()
+    async function handleClick() {
+        await GetDataMarkerJSON()
             .then(response => response.json())
             .then(data => {
                 // console.log("1"+JSON.stringify(data))
@@ -24,10 +24,7 @@ export default function GetDataFromServerButton({childToParent}) {
             //     console.log("1"+dataMarkers)
             // })
 
-
-
-
-        console.log(dataMarkers)
+         console.log(dataMarkers)
         // dataMarkers = data
         childToParent(dataMarkers)
 

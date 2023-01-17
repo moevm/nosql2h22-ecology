@@ -37,29 +37,15 @@ const data2 = [
 ]
 export default function DataTableWitchSearch() {
     const [search, setSearch] = useState('');
-    const [dataMarkers, setDataMarkers] = useState(Data);
+    const [dataMarkers, setDataMarkers] = useState(getDataFromLocalStorage());
     const [data, setData] = useState(getData(dataMarkers))
-    // const [data, setData] = useState({
-    //     nodes: dataMarkers.filter((item) =>
-    //         item.name.toLowerCase().includes(search.toLowerCase())
-    //     ),
-    // })
+
     const navigate = useNavigate();
-    // let data = {
-    //     nodes: dataMarkers.filter((item) =>
-    //         item.name.toLowerCase().includes(search.toLowerCase())
-    //     ),
-    // };
-    // let data = getData(dataMarkers)
 
     function getData(old_data){
-        // console.log(typeof old_data)
-        // console.log(Array.isArray(old_data))
-        // console.log(old_data)
         let tmp = old_data
         if (Array.isArray(tmp) === false){
             tmp = JSON.parse(tmp)
-            // console.log(tmp)
         }
         return {
             nodes: tmp.filter((item) =>
@@ -67,18 +53,30 @@ export default function DataTableWitchSearch() {
             ),
         }
     }
-    const childToParent = (childdata) => {
-        // console.log(childdata)
-        setDataMarkers(childdata);
-        // console.log(dataMarkers)
-        setData(getData(dataMarkers))
-        // setData({
-        //     nodes: dataMarkers.filter((item) =>
-        //         item.name.toLowerCase().includes(search.toLowerCase())
-        //     ),
-        // })
+
+    function saveDataToLocalStorage(json){
+        localStorage.setItem("data", json)
+    }
+    function getDataFromLocalStorage(){
+        if (localStorage.getItem("data") === null) {
+            return []
+        }
+        const localData = localStorage.getItem("data")
+        return localData
     }
 
+    const childToParent = (childdata) => {
+        console.log(childdata)
+        console.log("1")
+        console.log(data)
+        setDataMarkers(childdata);
+        console.log("2")
+        console.log(data)
+        setData(getData(dataMarkers))
+        console.log("3")
+        console.log(data)
+        saveDataToLocalStorage(childdata)
+    }
 
     const navigateHome = () => {
         navigate('/MapAdmin');
