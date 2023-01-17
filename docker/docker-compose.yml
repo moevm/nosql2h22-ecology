@@ -16,3 +16,25 @@ services:
             - ./export/neo4j/plugins:/plugins
         environment:
             - NEO4J_AUTH=neo4j/test
+
+    api_backend:
+        build:
+            context: ./
+        hostname: api_backend
+        restart: always
+        container_name: api_backend
+        ports:
+            - 3001:3001
+        depends_on:
+            - neo4j
+    
+    api_frontend:
+        build:
+            context: ../front
+        hostname: api_frontend
+        restart: always
+        container_name: api_frontend
+        ports:
+            - 3000:3000
+        depends_on:
+            - api_backend
