@@ -1,7 +1,7 @@
 import {useEffect} from "react";
-import { useMap } from "react-leaflet";
+import {useMap} from "react-leaflet";
 import L from "leaflet";
-import '../components/styles.css'
+import '../frontend/components/styles.css'
 
 export default function BootstrapButton() {
     const map = useMap();
@@ -13,13 +13,11 @@ export default function BootstrapButton() {
             position: "topright"
         });
 
-        buttonControl.onAdd = function (map) {
+        buttonControl.onAdd = function () {
             this._div = L.DomUtil.create("div", "myControl");
-            const buttonElement = `<div class="btnWrapper">
+            this._div.innerHTML = `<div class="btnWrapper">
       <button class="btn btn-primary">Sqq</button>
       </div>`;
-
-            this._div.innerHTML = buttonElement;
             return this._div;
         };
 

@@ -3,15 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@table-library/react-table-library": "^4.0.23",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "express": "^4.18.2",
     "leaflet": "^1.9.3",
+    "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.0",
+    "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "write-file-atomic": "^5.0.0",
+    "write-json-file": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,5 +43,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "browser": {
+    "fs": false
+  },
+  "devDependencies": {
+    "sass": "^1.57.1",
+    "sass-loader": "^10.4.1",
+    "webpack": "^5.75.0"
   }
 }
