@@ -1,0 +1,220 @@
+@import url("../../../node_modules/leaflet/dist/leaflet.css");
+
+
+
+body,
+#root,
+.leaflet-container {
+    height: 98vh;
+    width: 98vw;
+}
+#refreshButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+}
+
+.add-marker-button{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-1{
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-2{
+    position: absolute;
+    top: 50px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-3{
+    position: absolute;
+    top: 80px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-4{
+    position: absolute;
+    top: 110px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-5{
+    position: absolute;
+    top: 140px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-form-button{
+    position: absolute;
+    top: 170px;
+    right: 10%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.add-marker-field1{
+    position: absolute;
+    top: 20px;
+    right: 55%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-field2{
+    position: absolute;
+    top: 20px;
+    right: 41%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-field3{
+    position: absolute;
+    top: 20px;
+    right: 29%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-field4{
+    position: absolute;
+    top: 20px;
+    right: 17%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-field5{
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-controlled-1{
+    position: absolute;
+    top: 20px;
+    right: 75%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-controlled-2{
+    position: absolute;
+    top: 20px;
+    right: 41%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.add-marker-controlled-3{
+    position: absolute;
+    top: 20px;
+    right: 19%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.add-marker-controlled-submit{
+    position: absolute;
+    top: 20px;
+    right: 11%;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.update-button{
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.upload-button{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.get-data-button{
+    position: absolute;
+    top: 410px;
+    right: 20px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
+.DataTable-button{
+    position: absolute;
+    top: 280px;
+    right: 20px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
