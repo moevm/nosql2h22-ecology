@@ -3,3 +3,14 @@
     display: flex;
     justify-content: center;
 }
+
+.export-button{
+    position: absolute;
+    top: 460px;
+    right: 20px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
