@@ -1,0 +1,26 @@
+[
+  {
+    "lat": 21.45,
+    "lon": 22.22,
+    "id": 1,
+    "name": "asfd",
+    "desc": "descr",
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": 100,
+    "district_name": "Saint-Petersburg",
+    "last_change": "27.01.2023, 22:42:10"
+  },
+  {
+    "lat": 21.45,
+    "lon": 22.22,
+    "id": 1,
+    "name": "asfd",
+    "desc": "descr",
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": 100,
+    "district_name": "Saint-Petersburg",
+    "last_change": "27.01.2023, 22:42:10"
+  }
+]
