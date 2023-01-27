@@ -1,113 +1,90 @@
 [
   {
-    "lat": 22.222,
-    "lon": 19.13,
-    "name": "ETU",
-    "desc": "ab",
+    "lat": "21.455555555",
+    "lon": "22.222323232323",
+    "id": "1111",
+    "name": "asfd",
+    "desc": "descr",
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": "100999",
+    "district_name": "Saint-Petersburg"
+  },
+  {
+    "lat": "21.455555555",
+    "lon": "22.222323232323",
+    "id": "1111",
+    "name": "asfd",
+    "desc": "descr",
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": "100999",
+    "district_name": ":int-Petersburg"
+  },
+  {
+    "lat": "21.455555555",
+    "lon": "22.222323232323",
+    "id": "1111",
+    "name": "asfd",
+    "desc": "descr",
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": "100999",
+    "district_name": "Saint-Petersburg",
     "last_change": "2022-07-23T18:25:43.511Z"
   },
   {
-    "lat": 22.21212,
-    "lon": 19.14,
-    "name": "ITMO",
-    "desc": "ab",
-    "last_change": "2022-06-23T18:25:43.511Z"
-  },
-  {
-    "lat": 10.122,
-    "lon": 19.15,
-    "name": "MSU",
-    "desc": "ab",
-    "last_change": "2022-05-23T18:25:43.511Z"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
+    "lat": "21.455555555",
+    "lon": "22.222323232323",
+    "id": "1111",
     "name": "asfd",
     "desc": "descr",
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": "100999",
+    "district_name": ":int-Petersburg",
     "last_change": "2022-07-23T18:25:43.511Z"
   },
   {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
+    "lat": "21.455555555",
+    "lon": "22.222323232323",
+    "id": "1111",
     "name": "asfd",
-    "desc": "qwe",
+    "desc": "descr",
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": "100999",
+    "district_name": ":int-Petersburg",
     "last_change": "2022-07-23T18:25:43.511Z"
   },
   {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
+    "lat": "21.455555555",
+    "lon": "22.222323232323",
+    "id": "1111",
     "name": "asfd",
     "desc": "descr",
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": "100999",
+    "district_name": ":int-Petersburg",
     "last_change": "2022-07-23T18:25:43.511Z"
   },
   {
-    "lat": "111",
+    "lat": 21.45,
     "lon": 22.22,
-    "id": 3,
-    "name": "asfdqwe",
-    "desc": "1qdescrqwe"
-  },
-  {
-    "lat": "110.999996",
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfdqwe",
-    "desc": "1qdescrqwe"
-  },
-  {
-    "lat": "110.999996",
-    "lon": "22.219999",
-    "id": 3,
-    "name": "asfdqwe",
-    "desc": "1qdescrqwe"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
+    "id": 1,
     "name": "asfd",
-    "desc": "descr"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfd",
-    "desc": "descr"
-  },
-  {
-    "lat": "11",
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfd",
-    "desc": "descr"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfd",
-    "desc": "descr"
-  },
-  {
-    "lat": "44.4",
-    "lon": 22.22,
-    "id": 3,
-    "name": "asd",
     "desc": "descr",
-    "danger_level": "444",
-    "pol_type": "SPB",
-    "area": "11",
-    "district_name": "Saint-Petersburg"
+    "danger_level": 2,
+    "pol_type": "chemistry",
+    "area": 100,
+    "district_name": "Saint-Petersburg",
+    "last_change": "2022-07-23T18:25:43.511Z"
   },
   {
-    "lat": 1.45,
+    "lat": 21.45,
     "lon": 22.22,
-    "id": 3,
+    "id": 1,
     "name": "asfd",
     "desc": "descr",
     "danger_level": 2,
@@ -116,9 +93,9 @@
     "district_name": "Saint-Petersburg"
   },
   {
-    "lat": 1.45,
+    "lat": 21.45,
     "lon": 22.22,
-    "id": 3,
+    "id": "14",
     "name": "asfd",
     "desc": "descr",
     "danger_level": 2,
@@ -127,80 +104,15 @@
     "district_name": "Saint-Petersburg"
   },
   {
-    "lat": 1.45,
+    "lat": 21.45,
     "lon": 22.22,
-    "id": 3,
+    "id": 1,
     "name": "asfd",
     "desc": "descr",
     "danger_level": 2,
     "pol_type": "chemistry",
     "area": 100,
-    "district_name": "Saint-Petersburg"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfd",
-    "desc": "descr",
-    "danger_level": 2,
-    "pol_type": "chemistry",
-    "area": 100,
-    "district_name": "Saint-Petersburg"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfd",
-    "desc": "descr",
-    "danger_level": 2,
-    "pol_type": "chemistry",
-    "area": 100,
-    "district_name": "Saint-Petersburg"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfd",
-    "desc": "descr",
-    "danger_level": 2,
-    "pol_type": "chemistry",
-    "area": 100,
-    "district_name": "Saint-Petersburg"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfd",
-    "desc": "descr",
-    "danger_level": 2,
-    "pol_type": "chemistry",
-    "area": 100,
-    "district_name": "Saint-Petersburg"
-  },
-  {
-    "lat": 1.45,
-    "lon": 22.22,
-    "id": 3,
-    "name": "asfd",
-    "desc": "descr",
-    "danger_level": 2,
-    "pol_type": "chemistry",
-    "area": 100,
-    "district_name": "Saint-Petersburg"
-  },
-  {
-    "lat": "123",
-    "lon": "22",
-    "id": "4",
-    "name": "names",
-    "desc": "description",
-    "danger_level": "3",
-    "pol_type": "SPB",
-    "area": "120",
-    "district_name": "Saint-Petersburg"
+    "district_name": "Saint-Petersburg",
+    "last_change": "2023-01-27T22:35:43.511Z"
   }
 ]
