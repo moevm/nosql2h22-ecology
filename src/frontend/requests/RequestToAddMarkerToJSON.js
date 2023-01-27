@@ -30,10 +30,15 @@ export function PostUploadedFile(file) {
 export function GetDataMarkerJSON(){
     return fetch('http://localhost:5000/data', {
         method: "GET",
-        // headers: {
-        //     Accept: 'application/json',
-        //     'Content-Type': 'application/json',
-        // }
+        headers: {
+
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            // 'Cache-Control': 'no-cache, no-store, must-revalidate',
+            Pragma: 'no-store',
+            Cache: 'no-store',
+            'Cache-Control': 'no-store'
+        }
     })
 }
 
