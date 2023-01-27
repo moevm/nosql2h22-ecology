@@ -1,6 +1,5 @@
 import React from "react";
 import {useState} from "react";
-import DataTable from "./frontend/components/DataTable";
 import DataTableWitchSearch from "./frontend/components/DataTableWithSearch";
 import MapComponent from "./frontend/components/MapAdmin";
 import MapComponentUser from "./frontend/components/MapUser";
@@ -16,15 +15,9 @@ import {
 function App() {
 
     const [loggedIn, setloggedIn] = useState(false);
-    const [isAdmin, setIsAdmin] = useState(false);
-
 
     function callbackFunction(childData) {
         setloggedIn(childData);
-    }
-
-    function callbackFunctionIsAdmin(childData) {
-        setIsAdmin(childData);
     }
 
     return (
