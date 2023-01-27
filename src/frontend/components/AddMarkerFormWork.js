@@ -23,7 +23,8 @@ class AddMarkerFormWork extends React.Component {
             danger_level: 2,
             pol_type: "chemistry",
             area: 100,
-            district_name: "Saint-Petersburg"
+            district_name: "Saint-Petersburg",
+            last_change: "2023-01-27T22:35:43.511Z"
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
