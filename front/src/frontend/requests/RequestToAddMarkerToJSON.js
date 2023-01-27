@@ -9,13 +9,36 @@ export function PostDataMarkerJSON(jsonData) {
     })
 }
 
-export function GetDataMarkerJSON(){
-    return fetch('http://localhost:5000/data', {
-        method: "GET",
+export function PostUploadedFile(file) {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('fileName', file.name);
+
+    return fetch('http://localhost:5000/uploadfile', { //МЕНЯТЬ АДРЕС ТУТ
+        method: "POST",
         // headers: {
         //     Accept: 'application/json',
         //     'Content-Type': 'application/json',
-        // }
+        // },
+        headers: {
+            'content-type': 'multipart/form-data',
+        },
+        body: formData,
+    })
+}
+
+export function GetDataMarkerJSON(){
+    return fetch('http://localhost:5000/data', {
+        method: "GET",
+        headers: {
+
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            // 'Cache-Control': 'no-cache, no-store, must-revalidate',
+            Pragma: 'no-store',
+            Cache: 'no-store',
+            'Cache-Control': 'no-store'
+        }
     })
 }
 

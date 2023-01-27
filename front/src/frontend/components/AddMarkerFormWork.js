@@ -1,19 +1,32 @@
 import React from "react";
 import {PostDataMarkerJSON} from "../requests/RequestToAddMarkerToJSON";
 // import {writeJsonFile} from 'write-json-file';
-import saveJSON from "../../backend/SaveJSON";
+// import saveJSON from "../../backend/SaveJSON";
 import loadJSON from "../../backend/LoadJSON";
+import './Map.css'
+import * as fs from 'fs';
+
+function saveJSON(filename = '', json = '""') {
+    return fs.writeFileSync(filename,
+        JSON.stringify(json, null, 2))
+}
 
 class AddMarkerFormWork extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            lat: 1.45,
+            lat: 21.45,
             lon: 22.22,
-            id: 3,
+            id: 1,
             name: "asfd",
-            description: "descr"
-        };
+            desc: "descr",
+            danger_level: 2,
+            pol_type: "chemistry",
+            area: 100,
+            district_name: "Saint-Petersburg",
+            last_change: new Date().toLocaleString()
+
+    };
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.AddMarkerToJSON = this.AddMarkerToJSON.bind(this);
@@ -30,12 +43,32 @@ class AddMarkerFormWork extends React.Component {
         // saveJSON('data.json', data)
         console.log(this.state)
         this.sendMarkerDataJSON()
-
+        this.saveDataToLocalStorage(this.state)
+    }
+    saveDataToLocalStorage(json){
+        console.log("json = "+json)
+        let united_data = this.getDataFromLocalStorage()
+        console.log("united data = "+united_data)
+        console.log(typeof united_data)
+        // if (Array.isArray(united_data) === false){
+        //     united_data = JSON.parse(united_data)
+        // }
+        united_data.push(json)
+        console.log("end = "+united_data)
+        saveJSON("data.json", united_data)
+        localStorage.setItem("data", json)
+    }
+    getDataFromLocalStorage(){
+        if (localStorage.getItem("data") === null) {
+            return []
+        }
+        const localData = localStorage.getItem("data")
+        return localData
     }
 
     handleInputChange(event) {
         const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const value = target.value;
         const name = target.name;
 
         this.setState({
@@ -44,22 +77,7 @@ class AddMarkerFormWork extends React.Component {
         console.log(this.state)
 
     }
-    // file_name, json
-    // async writeToJson() {
-    //     try {
-    //         const response = await writeJsonFile('foo.json', {foo: true});
-    //         console.log(response)
-    //
-    //     } catch (e) {
-    //         console.log(`write to file FAILED : ${e}`);
-    //     }
-    // }
-//     writeFileAtomic = require('write-file-atomic')
-//     writeFileAtomic('message.txt', 'Hello Node', {chown:{uid:100,gid:50}}, function (err) {
-//     if (err) throw err;
-//     console.log('It\'s saved!');
-// });
-    render() {
+      render() {
         return (
             <div>
                 <form>
@@ -69,10 +87,9 @@ class AddMarkerFormWork extends React.Component {
                             name="lat"
                             type="number"
                             step="0.000001"
-                            checked={this.state.lat}
+                            value={this.state.lat}
                             onChange={this.handleInputChange} />
                     </label>
-                    {/*<br />*/}
                     <label className={"add-marker-form-2"}>
                         Lon
                         <input
@@ -101,12 +118,44 @@ class AddMarkerFormWork extends React.Component {
                     <label className={"add-marker-form-5"}>
                         Description
                         <input
-                            name="description"
+                            name="desc"
                             type="text"
-                            value={this.state.description}
+                            value={this.state.desc}
                             onChange={this.handleInputChange} />
                     </label>
-
+                    <label className={"add-marker-form-6"}>
+                        Danger level
+                        <input
+                            name="danger_level"
+                            type="number"
+                            step="0.000001"
+                            value={this.state.danger_level}
+                            onChange={this.handleInputChange} />
+                    </label>
+                    <label className={"add-marker-form-7"}>
+                        Pol type
+                        <input
+                            name="pol_type"
+                            type="text"
+                            value={this.state.pol_type}
+                            onChange={this.handleInputChange} />
+                    </label>
+                    <label className={"add-marker-form-8"}>
+                        Area
+                        <input
+                            name="area"
+                            type="number"
+                            value={this.state.area}
+                            onChange={this.handleInputChange} />
+                    </label>
+                    <label className={"add-marker-form-9"}>
+                        District
+                        <input
+                            name="district_name"
+                            type="text"
+                            value={this.state.district_name}
+                            onChange={this.handleInputChange} />
+                    </label>
                     <button type="button" onClick={this.AddMarkerToJSON} className={"add-marker-form-button"}> Add Marker </button>
                 </form>
             </div>
