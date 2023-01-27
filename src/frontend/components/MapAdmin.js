@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import './Map.css';
 import "leaflet/dist/leaflet.css";
@@ -20,11 +20,7 @@ export default function MapComponent() {
         lng: 30.320966153,
         zoom: 10
     };
-    // const data = [
-    //     { lat: 22.222, lon: 19.13, name: "ETU", desc: "ab", last_change: "2022-07-23T18:25:43.511Z"},
-    //     { lat: 22.21212, lon: 19.14, name: "ITMO", desc: "ab", last_change: "2022-06-23T18:25:43.511Z"},
-    //     { lat: 10.122, lon: 19.15, name: "MSU", desc: "ab", last_change: "2022-05-23T18:25:43.511Z"},
-    // ]
+    // const [data, setData] = useState()
 
     let data = getDataFromLocalStorage()
 
@@ -67,7 +63,6 @@ export default function MapComponent() {
             />
             <AddMarkerFormWork/>
             <UpdateButton/>
-            {/*<UploadButton/>*/}
             <ExportDataButton/>
             <ImportDataButton/>
             <GetDataFromServerButton/>
@@ -78,12 +73,6 @@ export default function MapComponent() {
                 </Marker>
                 )
             })}
-            {/*<BootstrapButton/>*/}
-            {/*<Description*/}
-            {/*    title={"My Button Title"}*/}
-            {/*    markerPosition={[59.97152978128397, 30.3209661539183]}*/}
-            {/*    description="This is a custom description!"*/}
-            {/*/>*/}
         </MapContainer>
     );
     // }
