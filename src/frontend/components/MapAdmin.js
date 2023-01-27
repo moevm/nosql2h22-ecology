@@ -4,7 +4,7 @@ import './Map.css';
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import UpdateButton from "./UpdateButton";
-import UploadButton from "./UploadButtton";
+import ImportDataButton from "./ImportDataButton";
 import AddMarkerFormWork from "./AddMarkerFormWork";
 import {useNavigate} from "react-router-dom";
 import GetDataFromServerButton from "./GetDataFromServerButton";
@@ -16,8 +16,8 @@ L.Icon.Default.imagePath = "https://unpkg.com/leaflet@1.5.0/dist/images/";
 
 export default function MapComponent() {
     const state = {
-        lat: 59.97152978128397,
-        lng: 30.3209661539183,
+        lat: 59.971529781,
+        lng: 30.320966153,
         zoom: 10
     };
     // const data = [
@@ -69,6 +69,7 @@ export default function MapComponent() {
             <UpdateButton/>
             {/*<UploadButton/>*/}
             <ExportDataButton/>
+            <ImportDataButton/>
             <GetDataFromServerButton/>
             {data.map((val, key) => {
                 return (

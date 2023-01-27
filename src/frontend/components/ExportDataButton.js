@@ -26,9 +26,13 @@ export default function ExportDataButton() {
             })
     }
     const downloadTxtFile = () => {
-        let data;
-        data = getDataFromLocalStorage()
-        let fileData = data
+
+        // data = getDataFromLocalStorage()
+        GetDataRequest()
+        sleep(2000).then(()=>{
+            console.log('Uploading...');
+        })
+        let fileData = bigData
         const file = new Blob([fileData], {
             type: "text/plain;charset=utf-8}"
         });

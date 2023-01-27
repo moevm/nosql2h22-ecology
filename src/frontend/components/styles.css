@@ -14,3 +14,14 @@
     border-radius: 4px;
     background-color: white;
 }
+
+.import-button{
+    position: absolute;
+    top: 500px;
+    right: 20px;
+    z-index: 1000;
+    height: auto;
+    width: auto;
+    border-radius: 4px;
+    background-color: white;
+}
