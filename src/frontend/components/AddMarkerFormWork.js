@@ -24,8 +24,9 @@ class AddMarkerFormWork extends React.Component {
             pol_type: "chemistry",
             area: 100,
             district_name: "Saint-Petersburg",
-            last_change: "2023-01-27T22:35:43.511Z"
-        };
+            last_change: new Date().toLocaleString()
+
+    };
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.AddMarkerToJSON = this.AddMarkerToJSON.bind(this);
