@@ -1,8 +1,12 @@
 import "./styles.css";
 import ExportData from "./ExportData";
+import {GetDataMarkerJSON} from "../requests/RequestToAddMarkerToJSON";
 export default function ExportDataButton() {
-
-
+    function sleep(time){
+        return new Promise((resolve)=>setTimeout(resolve,time)
+        )
+    }
+    let bigData;
     function getDataFromLocalStorage(){
         if (localStorage.getItem("data") === null) {
             return []
@@ -10,7 +14,17 @@ export default function ExportDataButton() {
         const localData = localStorage.getItem("data")
         return localData
     }
-
+    async function GetDataRequest() {
+        await GetDataMarkerJSON()
+            .then(response => response.json())
+            .then(data => {
+                // console.log("1"+JSON.stringify(data))
+                let strData;
+                strData = JSON.stringify(data)
+                console.log(strData)
+                bigData = strData
+            })
+    }
     const downloadTxtFile = () => {
         let data;
         data = getDataFromLocalStorage()

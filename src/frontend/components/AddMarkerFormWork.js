@@ -1,16 +1,23 @@
 import React from "react";
 import {PostDataMarkerJSON} from "../requests/RequestToAddMarkerToJSON";
 // import {writeJsonFile} from 'write-json-file';
-import saveJSON from "../../backend/SaveJSON";
+// import saveJSON from "../../backend/SaveJSON";
 import loadJSON from "../../backend/LoadJSON";
+import './Map.css'
+import * as fs from 'fs';
+
+function saveJSON(filename = '', json = '""') {
+    return fs.writeFileSync(filename,
+        JSON.stringify(json, null, 2))
+}
 
 class AddMarkerFormWork extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            lat: 1.45,
+            lat: 21.45,
             lon: 22.22,
-            id: 3,
+            id: 1,
             name: "asfd",
             desc: "descr",
             danger_level: 2,
@@ -34,7 +41,6 @@ class AddMarkerFormWork extends React.Component {
         // saveJSON('data.json', data)
         console.log(this.state)
         this.sendMarkerDataJSON()
-        console.log(this.state)
         this.saveDataToLocalStorage(this.state)
     }
     saveDataToLocalStorage(json){
@@ -79,7 +85,7 @@ class AddMarkerFormWork extends React.Component {
                             name="lat"
                             type="number"
                             step="0.000001"
-                            checked={this.state.lat}
+                            value={this.state.lat}
                             onChange={this.handleInputChange} />
                     </label>
                     <label className={"add-marker-form-2"}>
@@ -121,7 +127,7 @@ class AddMarkerFormWork extends React.Component {
                             name="danger_level"
                             type="number"
                             step="0.000001"
-                            checked={this.state.danger_level}
+                            value={this.state.danger_level}
                             onChange={this.handleInputChange} />
                     </label>
                     <label className={"add-marker-form-7"}>
@@ -129,7 +135,7 @@ class AddMarkerFormWork extends React.Component {
                         <input
                             name="pol_type"
                             type="text"
-                            checked={this.state.pol_type}
+                            value={this.state.pol_type}
                             onChange={this.handleInputChange} />
                     </label>
                     <label className={"add-marker-form-8"}>
@@ -137,7 +143,7 @@ class AddMarkerFormWork extends React.Component {
                         <input
                             name="area"
                             type="number"
-                            checked={this.state.area}
+                            value={this.state.area}
                             onChange={this.handleInputChange} />
                     </label>
                     <label className={"add-marker-form-9"}>
@@ -145,7 +151,7 @@ class AddMarkerFormWork extends React.Component {
                         <input
                             name="district_name"
                             type="text"
-                            checked={this.state.district_name}
+                            value={this.state.district_name}
                             onChange={this.handleInputChange} />
                     </label>
                     <button type="button" onClick={this.AddMarkerToJSON} className={"add-marker-form-button"}> Add Marker </button>
